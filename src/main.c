@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int readin(char* h, int &i, char el)
+int readin(char* h, int& i, char el)
 {
     int k = 0, coor;
     char ch[100];
