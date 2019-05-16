@@ -27,21 +27,6 @@ void error()
     printf("Error: unknown shape/shapes or wrong coordinates\n");
 }
 
-int readin(char* h, int& i, char el)
-{
-    int k = 0, coor;
-    char ch[100];
-    memset(ch, 0, sizeof(ch));
-    while (h[i] != el) {
-        ch[k] = h[i];
-        k++;
-        i++;
-    }
-    coor = atoi(ch);
-    i = i + 1;
-    return coor;
-}
-
 int rtext(char* h)
 {
     int errortext = 0;

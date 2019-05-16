@@ -3,17 +3,6 @@
 #include <ctest.h>
 #include <text.h>
 
-CTEST(read__test, result_test)
-{
-    // Given
-    char h[]="(1,2,3)"
-    int i = 1;
-    // When
-    char result = readin(h, i, ',');
-    // Then
-    const char expected = '1';
-    ASSERT_EQUAL(expected, result);
-}
 CTEST(errortext_test(right), result_test)
 {
     // Given
