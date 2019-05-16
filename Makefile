@@ -24,6 +24,6 @@ build/test:
 bin/geometry_test: build/test/main.o build/test/func.o
 	$(CC) $(CFLAGS) build/test/main.o build/test/func.o -o bin/geometry_test -lm
 build/test/main.o: test/main.c
-	$(CC) $(CFLAGS) -c -I thirdparty -I src test/main.ppc -o build/test/main.o -lm
+	$(CC) $(CFLAGS) -c -I thirdparty -I src test/main.c -o build/test/main.o -lm
 build/test/func.o: src/func.c
 	$(CC) $(CFLAGS) -c -I thirdparty -I src src/func.c -o build/test/func.o -lm        
