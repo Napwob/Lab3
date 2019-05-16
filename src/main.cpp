@@ -29,6 +29,7 @@ int main()
     char h[20] = "", h1[20] = "";
     double s, p;
     double s1, p1;
+    int i = 7;
     while (1) {
         errortext = 0;
         errornumber = 0;
@@ -43,20 +44,23 @@ int main()
         errortext = rtext(h);
         errornumber = rnumber(h);
 
-        if (errortext == 0 && errornumber == 4)
-            int i = 7;
+        if (errortext == 0 && errornumber == 4){
         x = readin(h, i, ',');
         y = readin(h, i, ',');
         r = readin(h, i, ')');
-
+        }
         errortext1 = rtext(h1);
         errornumber1 = rnumber(h1);
 
         if (errortext1 == 0 && errornumber1 == 4)
-            int i = 7;
+        {
+
+
+        i = 7;
         x = readin(h, i, ',');
         y = readin(h, i, ',');
         r = readin(h, i, ')');
+        }
         if (errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4
             && errortext1 == 0 && x1 != 0 && y1 != 0 && r1 != 0
             && errornumber1 == 4) {
