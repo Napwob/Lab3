@@ -109,10 +109,8 @@ CTEST(figurearea__test, result_test)
     double p;
     int r = 5;
 
-
     // When
-    fsp(s, p, r)
-    s*=p;
+    fsp(s, p, r) s *= p;
     const double tol = 0.01;
     // Then
     const int expected = 2467.3985;
