@@ -44,7 +44,7 @@ int main()
             type(x, y, r, s, p);
             type(x1, y1, r1, s1, p1);
             at = ati(x, y, r, x1, y1, r1);
-            if (ati == 0)
+            if (at == 0)
                 printf("\nFigures cross each other\n");
             else
                 printf("\nFigures not cross each other\n");
