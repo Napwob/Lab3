@@ -100,5 +100,4 @@ void ati(int x, int y, int r, int x1, int y1, int r1)
         printf("\nAnd they are crossing itself's\n");
     else
         printf("\nAnd they aren't crossing itself's\n");
-    printf("x-%d y-%d sqr- %d\n r -%d", x, y, sqr, r);
 }
