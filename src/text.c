@@ -62,10 +62,11 @@ void coor(int& x, int& y, int& r, char* h)
     r = readin(h, i, ')');
 }
 
-void fsp(double& s, double& p, int r)
+double fsp(int g,int r)
 {
-    s = r * r * M_PI;
-    p = 2 * M_PI * r;
+    if(g=1)
+    return s = r * r * M_PI; else
+    return p = 2 * M_PI * r;
 }
 
 int rnumber(char* h)

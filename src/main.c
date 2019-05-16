@@ -39,8 +39,10 @@ int main()
         if (errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4
             && errortext1 == 0 && x1 != 0 && y1 != 0 && r1 != 0
             && errornumber1 == 4) {
-            fsp(s, p, r);
-            fsp(s1, p1, r1);
+            s=fsp(1, r);
+            p=fsp(0,r);
+            s1=fsp(1, r1);
+            p1=fsp(0,r1);
             type(x, y, r, s, p);
             type(x1, y1, r1, s1, p1);
             at = ati(x, y, r, x1, y1, r1);
