@@ -13,6 +13,6 @@ int rtext(char* h);
 void coor(int& x, int& y, int& r, char* h);
 void fsp(double& s, double& p, int r);
 int rnumber(char* h);
-void ati(int x, int y, int r, int x1, int y1, int r1);
+int ati(int x, int y, int r, int x1, int y1, int r1);
 
 #endif
