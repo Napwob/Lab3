@@ -1,10 +1,10 @@
 #ifndef FUNC_H
 #define FUNC_H
 #include <iostream>
-#include <string>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string>
 
 void attention();
 void error();
