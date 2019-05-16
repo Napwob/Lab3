@@ -44,22 +44,19 @@ int main()
         errortext = rtext(h);
         errornumber = rnumber(h);
 
-        if (errortext == 0 && errornumber == 4){
-        x = readin(h, i, ',');
-        y = readin(h, i, ',');
-        r = readin(h, i, ')');
+        if (errortext == 0 && errornumber == 4) {
+            x = readin(h, i, ',');
+            y = readin(h, i, ',');
+            r = readin(h, i, ')');
         }
         errortext1 = rtext(h1);
         errornumber1 = rnumber(h1);
 
-        if (errortext1 == 0 && errornumber1 == 4)
-        {
-
-
-        i = 7;
-        x = readin(h, i, ',');
-        y = readin(h, i, ',');
-        r = readin(h, i, ')');
+        if (errortext1 == 0 && errornumber1 == 4) {
+            i = 7;
+            x = readin(h, i, ',');
+            y = readin(h, i, ',');
+            r = readin(h, i, ')');
         }
         if (errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4
             && errortext1 == 0 && x1 != 0 && y1 != 0 && r1 != 0
