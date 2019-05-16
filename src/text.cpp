@@ -41,10 +41,10 @@ int rtext(char* h)
 
 double fsp(int g, int r)
 {
-    if (g = 1)
-        return s = r * r * M_PI;
-    else
-        return p = 2 * M_PI * r;
+    if (g == 1)
+        return (r * r * M_PI);
+    if (g == 0)
+        return (2 * M_PI * r);
 }
 
 int rnumber(char* h)
