@@ -118,7 +118,7 @@ CTEST(figurearea__test8, result_test)
     const double tol = 0.01;
     // Then
     const int expected = 78.5398;
-    ASSERT_DBL_NEAR_TOL(expected, p, tol);
+    ASSERT_DBL_NEAR_TOL(expected, s, tol);
 }
 CTEST(figurearea__test9, result_test)
 {
