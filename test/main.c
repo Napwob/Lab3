@@ -84,7 +84,7 @@ CTEST(peres__test6, result_test)
     const int r2 = 1;
 
     // When
-    const int result = ait(x1, y1, r1, x2, y2, r2);
+    const int result = ati(x1, y1, r1, x2, y2, r2);
 
     // Then
     const int expected = 1;
@@ -111,13 +111,25 @@ CTEST(figurearea__test8, result_test)
 {
     // Given
     double s;
+    int r = 5;
+
+    // When
+    s = (1, r)
+    const double tol = 0.01;
+    // Then
+    const int expected = 78.5398;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+}
+CTEST(figurearea__test9, result_test)
+{
+    // Given
     double p;
     int r = 5;
 
     // When
-    fsp(s, p, r) s *= p;
+    p = (0, r)
     const double tol = 0.01;
     // Then
-    const int expected = 2467.3985;
-    ASSERT_DBL_NEAR_TOL(expected, result);
+    const int expected = 31.416;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
 }
