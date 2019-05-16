@@ -3,11 +3,13 @@ CC = gcc
 CFLAGS = -Wall -Werror
 SD = src/
 OD = build/
-EXECUTABLE = bin/result
+EXECUTABLE = bin/result.exe
 
 all: build/ bin/ $(EXECUTABLE)
 build/:
-	mkdir build/ -p        
+	mkdir build/ -p
+bin/:
+	mkdir bin/ -p           
 $(EXECUTABLE):  $(OD)main.o $(OD)text.o
 	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)text.o -lm
 $(OD)main.o: $(SD)main.cpp
