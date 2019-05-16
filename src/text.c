@@ -54,14 +54,6 @@ int rtext(char* h)
     return errortext;
 }
 
-void coor(int& x, int& y, int& r, char* h)
-{
-    int i = 7;
-    x = readin(h, i, ',');
-    y = readin(h, i, ',');
-    r = readin(h, i, ')');
-}
-
 double fsp(int g, int r)
 {
     if (g = 1)
