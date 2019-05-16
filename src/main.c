@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    int x, y, r, errortext, errornumber;
+    int x, y, r, errortext, errornumber, at;
     int x1, y1, r1, errortext1, errornumber1;
     char h[20] = "", h1[20] = "";
     double s, p;
@@ -43,8 +43,11 @@ int main()
             fsp(s1, p1, r1);
             type(x, y, r, s, p);
             type(x1, y1, r1, s1, p1);
-            ati(x, y, r, x1, y1, r1);
-            return 0;
+            at = ati(x, y, r, x1, y1, r1);
+            if (ati == 0)
+                printf("\nFigures cross each other\n");
+            else
+                printf("\nFigures not cross each other\n");
         } else {
             error();
         }

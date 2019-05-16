@@ -11,7 +11,7 @@ void attention()
 
 void attention1()
 {
-    printf("Please, enter 'circle(x,y,r)'\n");
+    printf("Please, enter the next'circle(x,y,r)'\n");
 }
 
 void type(int x, int y, int r, double s, double p)
@@ -83,11 +83,12 @@ int rnumber(char* h)
     return errornumber;
 }
 
-void ati(int x, int y, int r, int x1, int y1, int r1)
+int ati(int x, int y, int r, int x1, int y1, int r1)
 {
     int sqr;
     if (x == x1 && y == y1 && r == r1) {
-        printf("\nAnd they are crossing itself's\n");
+        printf("\nFigures cross each other\n");
+        return 0;
         exit(1);
     }
     r += r1;
@@ -97,7 +98,8 @@ void ati(int x, int y, int r, int x1, int y1, int r1)
     y = pow(y, 2);
     sqr = sqrt(x + y);
     if (sqr <= r)
-        printf("\nAnd they are crossing itself's\n");
-    else
-        printf("\nAnd they aren't crossing itself's\n");
+        printf("\nFigures cross each other\n");
+    return 0;
+    else printf("\nFigures not cross each other\n");
+    return 0;
 }
