@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 void attention()
 {
     printf("Please, enter 'circle(x,y,r)'\n");
@@ -77,7 +78,7 @@ int rnumber(char* h)
             errornumber++;
         }
         i++;
-        if (h[i] == " ")
+        if (h[i] == NULL)
             break;
     }
     return errornumber;
@@ -86,7 +87,7 @@ int rnumber(char* h)
 void ati(int x, int y, int r, int x1, int y1, int r1)
 {
     int sqr;
-    if (x == x1 && y == y1) {
+    if (x == x1 && y == y1 && r == r1) {
         printf("\nAnd they are crossing itself's\n");
         exit(1);
     }
@@ -102,3 +103,7 @@ void ati(int x, int y, int r, int x1, int y1, int r1)
         printf("\nAnd they aren't crossing itself's\n");
     printf("x-%d y-%d sqr- %d\n r -%d", x, y, sqr, r);
 }
+
+
+
+
