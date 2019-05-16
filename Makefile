@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -Wall -Werror
 SD = src/
 OD = build/
-EXECUTABLE = bin/result.exe
+EXECUTABLE = bin/result
 
 all: build/ bin/ $(EXECUTABLE)
 build/:
