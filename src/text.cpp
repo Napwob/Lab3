@@ -45,6 +45,7 @@ double fsp(int g, int r)
         return (r * r * M_PI);
     if (g == 0)
         return (2 * M_PI * r);
+    return 0;
 }
 
 int rnumber(char* h)
