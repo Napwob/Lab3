@@ -1,8 +1,9 @@
+#include "text.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "text.h"
+
 
 void attention()
 {
@@ -46,7 +47,7 @@ int rtext(char* h)
 {
     int errortext = 0;
     int i;
-    char f1[] = { "circle" };
+    char f1[] = {"circle"};
     for (i = 0; i < 6; i++) {
         if (h[i] != f1[i])
             errortext++;
