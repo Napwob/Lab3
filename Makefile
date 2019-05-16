@@ -10,12 +10,12 @@ build/:
 	mkdir build/ -p
 bin/:
 	mkdir bin/ -p    
-$(EXECUTABLE):	$(OD)main.o $(OD)text.o
-	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)text.o
+$(EXECUTABLE):	$(OD)main.o $(OD)func.o
+	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)func.o
 $(OD)main.o: $(SD)main.c
 	$(CC) $(CFLAGS) -c -o $(OD)main.o $(SD)main.c
-$(OD)text.o: $(SD)text.c
-	$(CC) $(CFLAGS) -c -o $(OD)text.o $(SD)text.c
+$(OD)func.o: $(SD)func.c
+	$(CC) $(CFLAGS) -c -o $(OD)func.o $(SD)func.c
 clean:
 	rm -rf $(EXECUTABLE) bin/geometry_test $(OD)*.o build/test/*.o
 test: build/test bin/geometry_test
