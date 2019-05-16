@@ -58,9 +58,9 @@ int main()
             y = readin(h, i, ',');
             r = readin(h, i, ')');
         }
-        if (errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4
-            && errortext1 == 0 && x1 != 0 && y1 != 0 && r1 != 0
-            && errornumber1 == 4) {
+        if ((errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4
+             && errortext1 == 0)
+            && (x1 != 0 && y1 != 0 && r1 != 0 && errornumber1 == 4)) {
             s = fsp(1, r);
             p = fsp(0, r);
             s1 = fsp(1, r1);
