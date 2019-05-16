@@ -3,7 +3,12 @@
 #include <ctest.h>
 #include <func.h>
 
-CTEST(errortext_test(right), result_test)
+int main(int argc, const char** argv)
+{
+    return ctest_main(argc, argv);
+}
+
+CTEST(errortext__test1, result_test)
 {
     // Given
     char f[] = "circle";
@@ -15,7 +20,7 @@ CTEST(errortext_test(right), result_test)
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
-CTEST(errortext_test(False), result_test)
+CTEST(errortext__test2, result_test)
 {
     // Given
     char f[] = "cirgse";
@@ -27,7 +32,7 @@ CTEST(errortext_test(False), result_test)
     const int expected = 2;
     ASSERT_EQUAL(expected, result);
 }
-CTEST(errortext_numbers(False), result_test)
+CTEST(errortext__number3, result_test)
 {
     // Given
     char f[] = "(1,5)";
@@ -39,7 +44,7 @@ CTEST(errortext_numbers(False), result_test)
     const int expected = 3;
     ASSERT_EQUAL(expected, result);
 }
-CTEST(errortext_numbers(right), result_test)
+CTEST(errortext__numbers4, result_test)
 {
     // Given
     char f[] = "(1,2,3)";
@@ -51,7 +56,7 @@ CTEST(errortext_numbers(right), result_test)
     const int expected = 4;
     ASSERT_EQUAL(expected, result);
 }
-CTEST(peres__test(right), result_test)
+CTEST(peres__test5, result_test)
 {
     // Given
     const int x1 = 1;
@@ -68,7 +73,7 @@ CTEST(peres__test(right), result_test)
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
-CTEST(peres__test(False), result_test)
+CTEST(peres__test6, result_test)
 {
     // Given
     const int x1 = 1;
@@ -85,7 +90,7 @@ CTEST(peres__test(False), result_test)
     const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
-CTEST(peres__test(right), result_test)
+CTEST(peres__test7, result_test)
 {
     // Given
     const int x1 = 2;
@@ -102,7 +107,7 @@ CTEST(peres__test(right), result_test)
     const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
-CTEST(figurearea__test, result_test)
+CTEST(figurearea__test8, result_test)
 {
     // Given
     double s;
