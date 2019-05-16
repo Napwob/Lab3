@@ -77,7 +77,7 @@ int rnumber(char* h)
             errornumber++;
         }
         i++;
-        if (h[i] == NULL)
+        if (h[i] == '\0')
             break;
     }
     return errornumber;
