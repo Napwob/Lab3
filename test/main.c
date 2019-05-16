@@ -114,11 +114,11 @@ CTEST(figurearea__test8, result_test)
     int r = 5;
 
     // When
-    s = fsp(1, r)
+    s = fsp(1, r);
     const double tol = 0.01;
     // Then
     const int expected = 78.5398;
-    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    ASSERT_DBL_NEAR_TOL(expected, p, tol);
 }
 CTEST(figurearea__test9, result_test)
 {
@@ -127,9 +127,9 @@ CTEST(figurearea__test9, result_test)
     int r = 5;
 
     // When
-    p = fsp(0, r)
+    p = fsp(0, r);
     const double tol = 0.01;
     // Then
     const int expected = 31.416;
-    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    ASSERT_DBL_NEAR_TOL(expected, p, tol);
 }
