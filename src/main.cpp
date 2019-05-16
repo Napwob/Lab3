@@ -54,9 +54,9 @@ int main()
 
         if (errortext1 == 0 && errornumber1 == 4) {
             i = 7;
-            x = readin(h, i, ',');
-            y = readin(h, i, ',');
-            r = readin(h, i, ')');
+            x1 = readin(h, i, ',');
+            y1 = readin(h, i, ',');
+            r1 = readin(h, i, ')');
         }
         if ((errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4
              && errortext1 == 0)
