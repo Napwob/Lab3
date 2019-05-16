@@ -16,5 +16,3 @@ int rnumber(char* h);
 void ati(int x, int y, int r, int x1, int y1, int r1);
 
 #endif
-
-
