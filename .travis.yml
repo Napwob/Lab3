@@ -7,5 +7,5 @@ compiler: gcc
 dist: xenial
 
 script: 
-    - git ls-files src/ | xargs clang-format -i && git diff --exit-code && make
+    - git ls-files src/ | xargs clang-format -i && git diff --exit-code && make && make test && ./bin/geometry_test
 

@@ -15,4 +15,13 @@ $(OD)main.o: $(SD)main.c
 $(OD)text.o: $(SD)text.c
 	$(CC) $(CFLAGS) -c -o $(OD)text.o $(SD)text.c
 clean:
-	rm -rf $(EXECUTABLE) $(OD)*.o         
+	rm -rf $(EXECUTABLE) bin/geometry_test $(OD)*.o build/test/*.o
+test: build/test bin/geometry_test
+build/test:
+	mkdir build/test -p
+bin/geometry_test: build/test/main.o build/test/func.o
+	$(CC) $(CFLAGS) build/test/main.o build/test/test.o -o bin/geometry_test -lm
+build/test/main.o: test/main.c
+	$(CC) $(CFLAGS) -c -I thirdparty -I src test/test.c -o build/test/test.o -lm
+build/test/func.o: src/text.c
+	$(CC) $(CFLAGS) -c -I thirdparty -I src src/test.c -o build/test/test.o -lm
