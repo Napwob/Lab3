@@ -1,9 +1,9 @@
 .PHONY:all clean
-CC = gcc -std=c99
+CC = gcc
 CFLAGS = -Wall -Werror
 SD = src/
 OD = build/
-EXECUTABLE = bin/result.exe
+EXECUTABLE = bin/circles
 
 all: build/ bin/ $(EXECUTABLE)
 build/:
@@ -15,7 +15,7 @@ $(EXECUTABLE):  $(OD)main.o $(OD)func.o
 $(OD)main.o: $(SD)main.cpp
 	$(CC) $(CFLAGS) -c -o  $(OD)main.o $(SD)main.cpp -lm
 $(OD)func.o: $(SD)func.cpp
-	 $(CC) $(CFLAGS) -c -o  $(OD)func.o $(SD)func.cpp -lm
+	$(CC) $(CFLAGS) -c -o  $(OD)func.o $(SD)func.cpp -lm
 clean:
 	rm -rf $(EXECUTABLE) bin/geometry_test $(OD)*.o build/test/*.o
 test: build/test bin/geometry_test
