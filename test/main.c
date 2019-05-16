@@ -67,7 +67,7 @@ CTEST(peres__test5, result_test)
     const int r2 = 3;
 
     // When
-    const int result = ait(x1, y1, r1, x2, y2, r2);
+    const int result = ati(x1, y1, r1, x2, y2, r2);
 
     // Then
     const int expected = 0;
@@ -114,7 +114,7 @@ CTEST(figurearea__test8, result_test)
     int r = 5;
 
     // When
-    s = (1, r)
+    s = fsp(1, r)
     const double tol = 0.01;
     // Then
     const int expected = 78.5398;
@@ -127,7 +127,7 @@ CTEST(figurearea__test9, result_test)
     int r = 5;
 
     // When
-    p = (0, r)
+    p = fsp(0, r)
     const double tol = 0.01;
     // Then
     const int expected = 31.416;
