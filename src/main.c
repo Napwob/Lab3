@@ -8,63 +8,48 @@
 
 using namespace std;
 
-int readin(char* h, int i, char el) {
-	int k = 0, coor;
-	char ch[100];
-	memset(ch, 0, sizeof(ch));
-	while (h[i] != el) {
-		ch[k] = h[i];
-		k++;
-		i++;
-	}
-	coor = atoi(ch);
-	i = i + 1;
-	return coor;
-}
+int main()
+{
+    int x, y, r, errortext, errornumber;
+    int x1, y1, r1, errortext1, errornumber1;
+    char h[20] = "", h1[20] = "";
+    double s, p;
+    double s1, p1;
+    while (1) {
 
-int main() {
-	int x, y, r, errortext, errornumber;
-	int i;
-	char h[1000], f1[] = {"circle"};
-	memset(h, ' ', sizeof(h));
-	while (1) {
-		errortext = 0;
-		errornumber = 0;
-		attention();
-		cin >> h;
-		for (i = 0; i < 6; i++) {
-			if (h[i] != f1[i]) {
-				errortext++;
-			}
-		}
+        errortext = 0;
+        errornumber = 0;
+        attention();
+        cin >> h;
 
-		while (1) {
-			if (h[i] == ',' || h[i] == '(' || h[i] == ')')
-				errornumber++;
-			i++;
-			if (h[i] == ' ') break;
-		}
-		if (errortext == 0 && errornumber == 4) {
-			i = 7;
-			x = readin(h, i, ',');
-			y = readin(h, i, ',');
-			r = readin(h, i, ')');
-		}
-		if (errortext == 0 && x != 0 && y != 0 && r != 0 &&
-		    errornumber == 4) {
-			double s, p;
-			s = r * r * M_PI;
-			p = 2 * M_PI * r;
+        errortext1 = 0;
+        errornumber1 = 0;
+        attention1();
+        cin >> h1;
 
-			type();
-			puts(f1);
-			printf("%d - X\n%d - Y\n%d - R\n", x, y, r);
-			printf("Area = %.4f\n", s);
-			printf("Perimeter= %.4f\n", p);
+        errortext = rtext(h);
+        errornumber = rnumber(h);
 
-			return 0;
-		} else {
-			error();
-		}
-	}
+        if (errortext == 0 && errornumber == 4)
+            coor(x, y, r, h);
+
+        errortext1 = rtext(h1);
+        errornumber1 = rnumber(h1);
+
+        if (errortext1 == 0 && errornumber1 == 4)
+            coor(x1, y1, r1, h1);
+
+        //printf("\nt - %d n - %d\n",errortext1,errornumber1);
+        if (errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4 && errortext1 == 0 && x1 != 0 && y1 != 0 && r1 != 0 && errornumber1 == 4) {
+            fsp(s, p, r);
+            fsp(s1, p1, r1);
+            type(x, y, r, s, p);
+            type(x1, y1, r1, s1, p1);
+            ati(x, y, r, x1, y1, r1);
+            return 0;
+        }
+        else {
+            error();
+        }
+    }
 }
