@@ -3,7 +3,7 @@ CC = g++
 CFLAGS = -Wall -Werror
 SD = src/
 OD = build/
-EXECUTABLE = bin/circles
+EXECUTABLE = bin/result.exe
 
 all: build/ bin/ $(EXECUTABLE)
 build/:
