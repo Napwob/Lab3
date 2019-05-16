@@ -1,4 +1,6 @@
 #include "func.h"
+#include <iostream>
+#include <string>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
