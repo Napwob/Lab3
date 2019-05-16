@@ -1,4 +1,4 @@
-#include "text.h"
+#include "func.h"
 #include <iostream>
 #include <math.h>
 #include <stdio.h>

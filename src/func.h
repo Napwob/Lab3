@@ -1,5 +1,5 @@
-#ifndef TEXT_H
-#define TEXT_H
+#ifndef FUNC_H
+#define FUNC_H
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
