@@ -97,9 +97,11 @@ int ati(int x, int y, int r, int x1, int y1, int r1)
     x = pow(x, 2);
     y = pow(y, 2);
     sqr = sqrt(x + y);
-    if (sqr <= r)
+    if (sqr <= r) {
         printf("\nFigures cross each other\n");
-    return 0;
-    else printf("\nFigures not cross each other\n");
-    return 0;
+        return 0;
+    } else {
+        printf("\nFigures not cross each other\n");
+        return 1;
+    }
 }
