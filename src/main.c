@@ -4,7 +4,7 @@
 #include <stdlib.h>
 using namespace std;
 
-void readin(char* h, int& x, int& y, int& z)
+void readin(char* h, int& x, int& y, int& r)
 {
     int k = 0, coor;
     char ch[100];
@@ -29,7 +29,7 @@ void readin(char* h, int& x, int& y, int& z)
         k++;
         i++;
     }
-    z = atoi(ch);
+    r = atoi(ch);
     i = i + 1;
     return coor;
 }
@@ -57,24 +57,24 @@ int main()
         errortext = 0;
         errornumber = 0;
         attention();
-        cin >> h;
+        cin(h);
 
         errortext1 = 0;
         errornumber1 = 0;
         attention1();
-        cin >> h1;
+        cin(h1);
 
         errortext = rtext(h);
         errornumber = rnumber(h);
 
         if (errortext == 0 && errornumber == 4) {
-            readin(h, x, y, z);
+            readin(h, x, y, r);
         }
         errortext1 = rtext(h1);
         errornumber1 = rnumber(h1);
 
         if (errortext1 == 0 && errornumber1 == 4) {
-            readin(h1, x1, y1, z1);
+            readin(h1, x1, y1, r1);
         }
         if ((errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4
              && errortext1 == 0)
