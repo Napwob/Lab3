@@ -1,5 +1,6 @@
 #ifndef FUNC_H
 #define FUNC_H
+#include <math.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
