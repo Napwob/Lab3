@@ -59,8 +59,6 @@ int main()
     int errortext1, errornumber1;
     struct coor h2;
     struct coor h0;
-    char c;
-    int i = 0;
     char h[20] = "", h1[20] = "";
     double s, p;
     double s1, p1;
