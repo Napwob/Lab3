@@ -8,7 +8,7 @@ void readin(char* h, int& x, int& y, int& z)
 {
     int k = 0, coor;
     char ch[100];
-    int i=7;
+    int i = 7;
     memset(ch, 0, sizeof(ch));
     while (h[i] != ',') {
         ch[k] = h[i];
@@ -24,7 +24,7 @@ void readin(char* h, int& x, int& y, int& z)
     }
     y = atoi(ch);
     i = i + 1;
-     while (h[i] != ')') {
+    while (h[i] != ')') {
         ch[k] = h[i];
         k++;
         i++;
@@ -34,13 +34,13 @@ void readin(char* h, int& x, int& y, int& z)
     return coor;
 }
 
-void cin(char& *h)
+void cin(char&* h)
 {
     int i = 0;
     char c;
 
     while ((c = getchar()) != '\n') {
-        h[i]=c;
+        h[i] = c;
         i++;
     }
 }
