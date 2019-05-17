@@ -34,7 +34,7 @@ void readin(char* h, int& x, int& y, int& r)
 int* cin()
 {
     int i = 0;
-    char h[20]="";
+    char h[20] = "";
     int* a = h[];
     char c;
     while ((c = getchar()) != '\n') {
@@ -55,12 +55,12 @@ int main()
         errortext = 0;
         errornumber = 0;
         attention();
-        h=cin();
+        h = cin();
 
         errortext1 = 0;
         errornumber1 = 0;
         attention1();
-        h1=cin();
+        h1 = cin();
 
         errortext = rtext(h);
         errornumber = rnumber(h);
