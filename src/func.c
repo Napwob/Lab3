@@ -64,17 +64,18 @@ int rnumber(char* h)
 
 int ati(int x, int y, int r, int x1, int y1, int r1)
 {
-    int sqr;
+    double sqr;
+    double x5, y5;
     if (x == x1 && y == y1 && r == r1) {
         return 0;
         exit(1);
     }
     r += r1;
-    x = abs(x - x1);
-    y = abs(y - y1);
-    x = pow(x, 2);
-    y = pow(y, 2);
-    sqr = sqrt(x + y);
+    x5 = abs(x - x1);
+    y5 = abs(y - y1);
+    x5 = pow(x5, 2);
+    y5 = pow(y5, 2);
+    sqr = sqrt(x5 + y5);
     if (sqr <= r) {
         return 0;
     } else {
