@@ -35,7 +35,7 @@ CTEST(errortext__test2, result_test)
 CTEST(errortext__number3, result_test)
 {
     // Given
-    char f[] = "(1,5)";
+    char f[] = "circle(1,5)";
 
     // When
     const int result = rnumber(f);
@@ -47,7 +47,7 @@ CTEST(errortext__number3, result_test)
 CTEST(errortext__numbers4, result_test)
 {
     // Given
-    char f[] = "(1,2,3)";
+    char f[] = "circle(1,2,3)";
 
     // When
     const int result = rnumber(f);
@@ -104,7 +104,7 @@ CTEST(peres__test7, result_test)
     const int result = ati(x1, y1, r1, x2, y2, r2);
 
     // Then
-    const int expected = 1;
+    const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
 CTEST(figurearea__test8, result_test)
@@ -117,7 +117,7 @@ CTEST(figurearea__test8, result_test)
     s = fsp(1, r);
     const double tol = 0.01;
     // Then
-    const int expected = 78.5398;
+    const double expected = 78.5398;
     ASSERT_DBL_NEAR_TOL(expected, s, tol);
 }
 CTEST(figurearea__test9, result_test)
@@ -130,6 +130,6 @@ CTEST(figurearea__test9, result_test)
     p = fsp(0, r);
     const double tol = 0.01;
     // Then
-    const int expected = 31.416;
+    const double expected = 31.416;
     ASSERT_DBL_NEAR_TOL(expected, p, tol);
 }
