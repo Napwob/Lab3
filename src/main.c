@@ -2,14 +2,12 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-using namespace std;
 
 void readin(char* h, int& x, int& y, int& r)
 {
     int k = 0, coor;
     char ch[100];
     int i = 7;
-    memset(ch, 0, sizeof(ch));
     while (h[i] != ',') {
         ch[k] = h[i];
         k++;
@@ -31,38 +29,38 @@ void readin(char* h, int& x, int& y, int& r)
     }
     r = atoi(ch);
     i = i + 1;
-    return coor;
 }
 
-void cin(char&* h)
+int* cin()
 {
     int i = 0;
+    char h[20]="";
+    int* a = h[];
     char c;
-
     while ((c = getchar()) != '\n') {
         h[i] = c;
         i++;
     }
+    return a;
 }
 
 int main()
 {
     int x, y, r, errortext, errornumber, at;
     int x1, y1, r1, errortext1, errornumber1;
-    char h[20] = "", h1[20] = "";
+    char *h[20] = "", *h1[20] = "";
     double s, p;
     double s1, p1;
-    int i = 7;
     while (1) {
         errortext = 0;
         errornumber = 0;
         attention();
-        cin(h);
+        h=cin();
 
         errortext1 = 0;
         errornumber1 = 0;
         attention1();
-        cin(h1);
+        h1=cin();
 
         errortext = rtext(h);
         errornumber = rnumber(h);
