@@ -68,18 +68,12 @@ int main()
         errortext = 0;
         errornumber = 0;
         attention();
-        while ((c = getchar()) != '\n') {
-            h[i] = c;
-            i++;
-        }
+        scanf("%s", h);
 
         errortext1 = 0;
         errornumber1 = 0;
         attention1();
-        while ((c = getchar()) != '\n') {
-            h1[i] = c;
-            i++;
-        }
+        scanf("%s", h1);
 
         errortext = rtext(h);
         errornumber = rnumber(h);
