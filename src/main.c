@@ -40,11 +40,11 @@ struct coor readcr(char* h)
     return h1;
 }
 
-int* cin()
+char* cin()
 {
     int i = 0;
     char h[20] = " ";
-    int* a = h;
+    char* a = h;
     char c;
     while ((c = getchar()) != '\n') {
         h[i] = c;
@@ -59,6 +59,8 @@ int main()
     int errortext1, errornumber1;
     struct coor h2;
     struct coor h0;
+    char c;
+    int i = 0;
     char h[20] = "", h1[20] = "";
     double s, p;
     double s1, p1;
@@ -66,12 +68,18 @@ int main()
         errortext = 0;
         errornumber = 0;
         attention();
-        *h = cin();
+        while ((c = getchar()) != '\n') {
+            h[i] = c;
+            i++;
+        }
 
         errortext1 = 0;
         errornumber1 = 0;
         attention1();
-        *h1 = cin();
+        while ((c = getchar()) != '\n') {
+            h1[i] = c;
+            i++;
+        }
 
         errortext = rtext(h);
         errornumber = rnumber(h);
