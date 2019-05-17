@@ -1,25 +1,48 @@
 #include "func.h"
-#include <iostream>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <string>
 using namespace std;
 
-int readin(char* h, int& i, char el)
+void readin(char* h, int& x, int& y, int& z)
 {
     int k = 0, coor;
     char ch[100];
+    int i=7;
     memset(ch, 0, sizeof(ch));
-    while (h[i] != el) {
+    while (h[i] != ',') {
         ch[k] = h[i];
         k++;
         i++;
     }
-    coor = atoi(ch);
+    x = atoi(ch);
+    i = i + 1;
+    while (h[i] != ',') {
+        ch[k] = h[i];
+        k++;
+        i++;
+    }
+    y = atoi(ch);
+    i = i + 1;
+     while (h[i] != ')') {
+        ch[k] = h[i];
+        k++;
+        i++;
+    }
+    z = atoi(ch);
     i = i + 1;
     return coor;
+}
+
+void cin(char& *h)
+{
+    int i = 0;
+    char c;
+
+    while ((c = getchar()) != '\n') {
+        h[i]=c;
+        i++;
+    }
 }
 
 int main()
@@ -45,18 +68,13 @@ int main()
         errornumber = rnumber(h);
 
         if (errortext == 0 && errornumber == 4) {
-            x = readin(h, i, ',');
-            y = readin(h, i, ',');
-            r = readin(h, i, ')');
+            readin(h, x, y, z);
         }
         errortext1 = rtext(h1);
         errornumber1 = rnumber(h1);
 
         if (errortext1 == 0 && errornumber1 == 4) {
-            i = 7;
-            x1 = readin(h, i, ',');
-            y1 = readin(h, i, ',');
-            r1 = readin(h, i, ')');
+            readin(h1, x1, y1, z1);
         }
         if ((errortext == 0 && x != 0 && y != 0 && r != 0 && errornumber == 4
              && errortext1 == 0)
