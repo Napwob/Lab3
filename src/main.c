@@ -67,12 +67,14 @@ int main()
         errornumber = 0;
         attention();
         scanf("%s", h);
-
+        if (h[0] == 'z')
+            return 0;
         errortext1 = 0;
         errornumber1 = 0;
         attention1();
         scanf("%s", h1);
-
+        if (h[0] == 'z')
+            return 0;
         errortext = rtext(h);
         errornumber = rnumber(h);
 
@@ -96,9 +98,12 @@ int main()
             type(h2.x, h2.y, h2.r, s1, p1);
             at = ati(h0.x, h0.y, h0.r, h2.x, h2.y, h2.r);
             if (at == 0)
-                printf("\nFigures cross each other\n");
+                printf("\nFigures cross each other\nIf you want to exit print "
+                       "'Z' instead of 'circle(x,y,z)'\n\n");
+
             else
-                printf("\nFigures not cross each other\n");
+                printf("\nFigures not cross each other\nIf you want to exit "
+                       "print 'Z' instead of 'circle(x,y,z)'\n\n");
         } else {
             error();
         }
